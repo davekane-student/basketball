@@ -1,0 +1,50 @@
+---
+title: "NBA Games Data Summary"
+author: "Analysis Team"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: false
+---
+
+## Introduction
+
+This document reads and summarizes the NBA historical games dataset from `Games.csv` using R and the `tidyverse` package suite.
+
+## Loading Libraries and Data
+
+First, we load the `tidyverse` library and read in the dataset.
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+
+# Read the NBA games dataset
+games <- read_csv("Games.csv")
+```
+
+## Dataset Overview
+
+Let's examine the structure and size of the dataset.
+
+```{r}
+# Display dimensions
+dim(games)
+```
+
+The dataset contains `r nrow(games)` rows and `r ncol(games)` columns. Here is a glimpse of the columns:
+
+```{r}
+glimpse(games)
+```
+
+## Preview of the Data
+
+Here are the first few rows of the games dataset:
+
+```{r}
+head(games)
+```
