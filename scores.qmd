@@ -1,50 +1,89 @@
 ---
-title: "NBA Games Data Summary"
-author: "Analysis Team"
-date: today
 format:
   html:
-    theme: cosmo
-    toc: true
-    code-fold: false
+    theme: none
+    toc: false
+    embed-resources: true
+    minimal: true
 ---
 
-## Introduction
-
-This document reads and summarizes the NBA historical games dataset from `Games.csv` using R and the `tidyverse` package suite.
-
-## Loading Libraries and Data
-
-First, we load the `tidyverse` library and read in the dataset.
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+#quarto-content {
+  width: 100%;
+  max-width: 950px;
+}
+</style>
 
 ```{r}
+#| echo: false
 #| message: false
 #| warning: false
+#| fig-width: 10
+#| fig-height: 10
+#| dpi: 300
+
 library(tidyverse)
 
-# Read the NBA games dataset
-games <- read_csv("Games.csv")
-```
+# Read dataset
+games <- read_csv("Games.csv", show_col_types = FALSE) %>%
+  filter(homeScore > 0, awayScore > 0)
 
-## Dataset Overview
+# Calculate counts for each score combination
+score_counts <- games %>%
+  count(homeScore, awayScore)
 
-Let's examine the structure and size of the dataset.
+# Highlight some of the most famous outlier games
+outliers <- tribble(
+  ~homeScore, ~awayScore, ~label,
+  184,        186,        "DET 186 - 184 DEN\n(1983 - Highest Scoring)",
+  175,        176,        "SAC 176 - 175 LAC\n(2023 - 2OT Thriller)",
+  18,         19,         "FTW 19 - 18 MIN\n(1950 - Lowest Scoring)"
+)
 
-```{r}
-# Display dimensions
-dim(games)
-```
-
-The dataset contains `r nrow(games)` rows and `r ncol(games)` columns. Here is a glimpse of the columns:
-
-```{r}
-glimpse(games)
-```
-
-## Preview of the Data
-
-Here are the first few rows of the games dataset:
-
-```{r}
-head(games)
+# Plot the heatmap
+ggplot() +
+  geom_tile(data = score_counts, aes(x = homeScore, y = awayScore, fill = n), width = 1, height = 1) +
+  scale_fill_gradientn(
+    colors = c("#2c1e50", "#7f1e7f", "#d83c32", "#f58a24", "#ffd13b", "#ffffff"),
+    trans = "log10",
+    name = "Game Count",
+    breaks = c(1, 5, 20, 100, 500),
+    labels = c("1", "5", "20", "100", "500+")
+  ) +
+  # Larger text size for outlier labels
+  geom_text(data = outliers, aes(x = homeScore, y = awayScore, label = label),
+            color = "black", size = 3.5, fontface = "bold", vjust = -0.7, lineheight = 0.9) +
+  geom_point(data = outliers, aes(x = homeScore, y = awayScore), color = "black", size = 1.8, shape = 21, fill = "red") +
+  scale_x_continuous(breaks = seq(20, 180, 20), limits = c(15, 190)) +
+  scale_y_continuous(breaks = seq(20, 180, 20), limits = c(15, 190)) +
+  labs(
+    x = "Home Points",
+    y = "Visitor Points",
+    title = "NBA Scorigami",
+    subtitle = "A greater density of games lies below the 45° diagonal (where Home > Visitor), illustrating the home-court advantage.",
+    caption = "Data Source: kaggle.com | Project: SportsVizSunday"
+  ) +
+  # Larger base font size for better readability on the web
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 22, hjust = 0.5),
+    plot.subtitle = element_text(color = "gray30", size = 12, hjust = 0.5, margin = margin(b = 15)),
+    plot.caption = element_text(color = "gray50", size = 9, hjust = 1, face = "italic", margin = margin(t = 15)),
+    panel.grid.major = element_line(color = "gray90", linewidth = 0.25),
+    panel.grid.minor = element_line(color = "gray95", linewidth = 0.12),
+    axis.title = element_text(face = "bold", size = 14),
+    axis.text = element_text(size = 11),
+    legend.position = "right",
+    legend.key.height = unit(1.8, "cm"),
+    legend.title = element_text(size = 11, face = "bold"),
+    legend.text = element_text(size = 10)
+  )
 ```
