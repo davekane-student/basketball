@@ -1,23 +1,51 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "2026 NBA Finals",
+    "objectID": "index.html#understanding-the-visualization",
+    "href": "index.html#understanding-the-visualization",
+    "title": "NBA Scoring Analysis",
+    "section": "Understanding the Visualization",
+    "text": "Understanding the Visualization\nScorigami is a concept that celebrates the uniqueness of final scores in sports. This visualization maps every game score from the 2026 NBA playoffs, with the x-axis representing home team points and the y-axis representing visiting team points. Each tile’s color intensity indicates how frequently that particular score combination has occurred—darker colors represent rarer scores, while lighter colors show more common final scores.\nThe most striking feature of this chart is the asymmetry along the 45-degree diagonal line (where home score equals visitor score). Notice how there is a noticeably greater density of games below this diagonal—meaning more games end with the home team scoring more points than the visiting team. This visual pattern is a direct illustration of home-court advantage, one of the most well-documented phenomena in professional basketball. The home team benefits from familiar surroundings, supportive crowds, and reduced travel fatigue, resulting in a measurable edge in winning percentage and overall scoring performance throughout the season."
+  },
+  {
+    "objectID": "scores.html",
+    "href": "scores.html",
+    "title": "Game Scores",
     "section": "",
-    "text": "Welcome to the 2026 NBA Finals analytics dashboard!\nThis site showcases key statistics and visualizations from the playoff series."
+    "text": "Detailed Game Analysis\nThis page contains additional game scoring visualizations from the 2026 NBA playoffs. For the main scorigami visualization, see the home page."
   },
   {
-    "objectID": "index.html#featured-content",
-    "href": "index.html#featured-content",
-    "title": "2026 NBA Finals",
-    "section": "Featured Content",
-    "text": "Featured Content\n\nGame Scores - View detailed scoring analysis and visualizations"
+    "objectID": "history.html",
+    "href": "history.html",
+    "title": "Historical Trends",
+    "section": "",
+    "text": "This page shows how NBA scoring patterns have evolved over the past 80 years, with scorigami visualizations for each decade.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution of NBA scoring patterns over these decades reveals interesting trends:\n\nScoring ranges: Earlier decades show more clustering at lower scores, while recent decades have broader scoring distributions\nHome-court advantage consistency: The asymmetry below the 45° diagonal (favoring home teams) remains consistent across all decades\nGame frequency: The density and frequency of games has increased significantly in recent decades, reflecting the expansion of the league and increased sample sizes\n\nThis historical perspective demonstrates that while the fundamental advantage of playing at home has persisted throughout NBA history, the overall scoring landscape has shifted as the game has evolved."
   },
   {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "2026 NBA Finals",
-    "section": "About",
-    "text": "About\nThis is a Quarto website built with R and data from the 2026 NBA playoffs."
+    "objectID": "history.html#analysis",
+    "href": "history.html#analysis",
+    "title": "Historical Trends",
+    "section": "",
+    "text": "The evolution of NBA scoring patterns over these decades reveals interesting trends:\n\nScoring ranges: Earlier decades show more clustering at lower scores, while recent decades have broader scoring distributions\nHome-court advantage consistency: The asymmetry below the 45° diagonal (favoring home teams) remains consistent across all decades\nGame frequency: The density and frequency of games has increased significantly in recent decades, reflecting the expansion of the league and increased sample sizes\n\nThis historical perspective demonstrates that while the fundamental advantage of playing at home has persisted throughout NBA history, the overall scoring landscape has shifted as the game has evolved."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website showcases basketball analytics and visualizations spanning over 80 years of NBA history. It demonstrates data visualization techniques using Quarto and R to reveal patterns in scoring and home-court advantage across different eras of professional basketball.\nAuthor: David Kane\nContact: dave.kane@gmail.com\nGitHub Repository: davekane-student/basketball"
+  },
+  {
+    "objectID": "about.html#about-this-project",
+    "href": "about.html#about-this-project",
+    "title": "About",
+    "section": "",
+    "text": "This website showcases basketball analytics and visualizations spanning over 80 years of NBA history. It demonstrates data visualization techniques using Quarto and R to reveal patterns in scoring and home-court advantage across different eras of professional basketball.\nAuthor: David Kane\nContact: dave.kane@gmail.com\nGitHub Repository: davekane-student/basketball"
+  },
+  {
+    "objectID": "about.html#data-source",
+    "href": "about.html#data-source",
+    "title": "About",
+    "section": "Data Source",
+    "text": "Data Source\nThe data presented on this site comes from a comprehensive historical dataset of NBA game records spanning the last 80 years. The dataset includes complete game information such as team names, final scores, attendance figures, arena details, officiating information, and precise game dates and times. This extensive historical record allows for detailed longitudinal analysis of scoring patterns, trends in the game’s evolution, and the consistency of home-court advantage across multiple decades. The visualization techniques used here aim to uncover interesting patterns in NBA scoring and demonstrate how the game has changed over time."
   }
 ]

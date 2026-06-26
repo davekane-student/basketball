@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://davekane-student.github.io/basketball/index.html</loc>
-    <lastmod>2026-06-26T00:32:09.817Z</lastmod>
+    <lastmod>2026-06-26T00:40:34.502Z</lastmod>
   </url>
   <url>
     <loc>https://davekane-student.github.io/basketball/scores.html</loc>
-    <lastmod>2026-06-26T00:32:09.575Z</lastmod>
+    <lastmod>2026-06-26T00:39:02.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://davekane-student.github.io/basketball/history.html</loc>
+    <lastmod>2026-06-26T00:40:34.823Z</lastmod>
+  </url>
+  <url>
+    <loc>https://davekane-student.github.io/basketball/about.html</loc>
+    <lastmod>2026-06-26T00:40:35.029Z</lastmod>
   </url>
 </urlset>
