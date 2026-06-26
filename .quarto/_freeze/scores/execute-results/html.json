@@ -1,0 +1,17 @@
+{
+  "hash": "cc96246d11d77c49f44687979dc59233",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Game Scores\"\nformat: html\n---\n\n<style>\nbody {\n  margin: 0;\n  padding: 20px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 90vh;\n  background-color: #ffffff;\n  font-family: sans-serif;\n}\n.plot-container {\n  width: 100%;\n  max-width: 650px; /* Normal web display size */\n  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow for premium look */\n  border: 1px solid #eeeeee;\n  border-radius: 4px;\n  padding: 15px;\n}\nimg {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n</style>\n\n<div class=\"plot-container\">\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](scores_files/figure-html/unnamed-chunk-1-1.png){width=1200}\n:::\n:::\n\n\n</div>\n",
+    "supporting": [
+      "scores_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

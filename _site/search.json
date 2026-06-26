@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "2026 NBA Finals",
+    "section": "",
+    "text": "Welcome to the 2026 NBA Finals analytics dashboard!\nThis site showcases key statistics and visualizations from the playoff series."
+  },
+  {
+    "objectID": "index.html#featured-content",
+    "href": "index.html#featured-content",
+    "title": "2026 NBA Finals",
+    "section": "Featured Content",
+    "text": "Featured Content\n\nGame Scores - View detailed scoring analysis and visualizations"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "2026 NBA Finals",
+    "section": "About",
+    "text": "About\nThis is a Quarto website built with R and data from the 2026 NBA playoffs."
+  }
+]
