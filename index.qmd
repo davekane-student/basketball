@@ -1,0 +1,15 @@
+---
+title: "2026 NBA Finals"
+---
+
+Welcome to the 2026 NBA Finals analytics dashboard!
+
+This site showcases key statistics and visualizations from the playoff series.
+
+## Featured Content
+
+- [**Game Scores**](scores.qmd) - View detailed scoring analysis and visualizations
+
+## About
+
+This is a Quarto website built with R and data from the 2026 NBA playoffs.

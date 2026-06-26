@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Basketball Finals 2026"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: scores.qmd
+        text: Scores
+
+format:
+  html:
+    theme: default

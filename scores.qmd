@@ -1,10 +1,6 @@
 ---
-format:
-  html:
-    theme: none
-    toc: false
-    embed-resources: true
-    minimal: true
+title: "Game Scores"
+format: html
 ---
 
 <style>
