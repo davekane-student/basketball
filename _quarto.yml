@@ -3,13 +3,15 @@ project:
   output-dir: _site
 
 website:
-  title: "Basketball Finals 2026"
+  title: "NBA Scoring Analytics"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: scores.qmd
         text: Scores
+      - href: history.qmd
+        text: History
       - href: about.qmd
         text: About
 

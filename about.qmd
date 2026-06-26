@@ -4,7 +4,7 @@ title: "About"
 
 ## About This Project
 
-This website showcases basketball analytics and visualizations from the 2026 NBA playoffs. It was created as a demonstration of data visualization techniques using Quarto and R.
+This website showcases basketball analytics and visualizations spanning over 80 years of NBA history. It demonstrates data visualization techniques using Quarto and R to reveal patterns in scoring and home-court advantage across different eras of professional basketball.
 
 **Author:** David Kane  
 **Contact:** dave.kane@gmail.com  
@@ -12,4 +12,4 @@ This website showcases basketball analytics and visualizations from the 2026 NBA
 
 ## Data Source
 
-The data presented on this site comes from official NBA game records for the 2026 playoff season. The dataset includes comprehensive game information such as team names, final scores, attendance figures, arena details, and officiating information. This data provides a complete record of the playoff matchups, allowing for detailed analysis of scoring patterns and game outcomes throughout the postseason. The visualization techniques used here aim to uncover interesting patterns and trends in NBA scoring across different teams and venues.
+The data presented on this site comes from a comprehensive historical dataset of NBA game records spanning the last 80 years. The dataset includes complete game information such as team names, final scores, attendance figures, arena details, officiating information, and precise game dates and times. This extensive historical record allows for detailed longitudinal analysis of scoring patterns, trends in the game's evolution, and the consistency of home-court advantage across multiple decades. The visualization techniques used here aim to uncover interesting patterns in NBA scoring and demonstrate how the game has changed over time.

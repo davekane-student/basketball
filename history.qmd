@@ -1,0 +1,82 @@
+---
+title: "Historical Trends"
+format: html
+---
+
+# Scorigami Through the Decades
+
+This page shows how NBA scoring patterns have evolved over the past 80 years, with scorigami visualizations for each decade.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+# Read dataset
+games <- read_csv("Games.csv", show_col_types = FALSE) %>%
+  filter(homeScore > 0, awayScore > 0) %>%
+  mutate(year = year(gameDateTimeEst),
+         decade = (year %/% 10) * 10)
+
+# Get unique decades and sort descending
+decades <- sort(unique(games$decade), decreasing = TRUE)
+
+# Function to create scorigami plot for a decade
+create_decade_plot <- function(decade_data, decade_label) {
+  score_counts <- decade_data %>%
+    count(homeScore, awayScore)
+  
+  ggplot() +
+    geom_tile(data = score_counts, aes(x = homeScore, y = awayScore, fill = n), width = 1, height = 1) +
+    scale_fill_gradientn(
+      colors = c("#2c1e50", "#7f1e7f", "#d83c32", "#f58a24", "#ffd13b", "#ffffff"),
+      trans = "log10",
+      name = "Game Count",
+      breaks = c(1, 5, 20, 100, 500),
+      labels = c("1", "5", "20", "100", "500+")
+    ) +
+    scale_x_continuous(breaks = seq(20, 180, 20), limits = c(15, 190)) +
+    scale_y_continuous(breaks = seq(20, 180, 20), limits = c(15, 190)) +
+    labs(
+      x = "Home Points",
+      y = "Visitor Points",
+      title = paste(decade_label, "- NBA Scorigami")
+    ) +
+    theme_minimal(base_size = 10) +
+    theme(
+      plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+      axis.title = element_text(face = "bold", size = 9),
+      axis.text = element_text(size = 8),
+      legend.position = "right",
+      legend.key.height = unit(0.8, "cm"),
+      legend.title = element_text(size = 8, face = "bold"),
+      legend.text = element_text(size = 7),
+      panel.grid.major = element_line(color = "gray90", linewidth = 0.2)
+    )
+}
+
+# Create plots for each decade
+plots <- list()
+for (d in decades) {
+  decade_data <- games %>% filter(decade == d)
+  decade_label <- paste0(d, "s")
+  plots[[as.character(d)]] <- create_decade_plot(decade_data, decade_label)
+}
+
+# Display plots
+for (i in seq_along(plots)) {
+  print(plots[[i]])
+}
+```
+
+## Analysis
+
+The evolution of NBA scoring patterns over these decades reveals interesting trends:
+
+- **Scoring ranges**: Earlier decades show more clustering at lower scores, while recent decades have broader scoring distributions
+- **Home-court advantage consistency**: The asymmetry below the 45° diagonal (favoring home teams) remains consistent across all decades
+- **Game frequency**: The density and frequency of games has increased significantly in recent decades, reflecting the expansion of the league and increased sample sizes
+
+This historical perspective demonstrates that while the fundamental advantage of playing at home has persisted throughout NBA history, the overall scoring landscape has shifted as the game has evolved.
