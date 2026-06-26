@@ -1,3 +1,7 @@
 # Quarto output directories
 scores_files/
 .quarto/
+
+/.quarto/
+**/*.quarto_ipynb
+_site
