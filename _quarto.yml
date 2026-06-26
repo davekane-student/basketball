@@ -10,6 +10,8 @@ website:
         text: Home
       - href: scores.qmd
         text: Scores
+      - href: about.qmd
+        text: About
 
 format:
   html:

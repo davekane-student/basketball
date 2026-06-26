@@ -1,0 +1,15 @@
+---
+title: "About"
+---
+
+## About This Project
+
+This website showcases basketball analytics and visualizations from the 2026 NBA playoffs. It was created as a demonstration of data visualization techniques using Quarto and R.
+
+**Author:** David Kane  
+**Contact:** dave.kane@gmail.com  
+**GitHub Repository:** [davekane-student/basketball](https://github.com/davekane-student/basketball)
+
+## Data Source
+
+The data presented on this site comes from official NBA game records for the 2026 playoff season. The dataset includes comprehensive game information such as team names, final scores, attendance figures, arena details, and officiating information. This data provides a complete record of the playoff matchups, allowing for detailed analysis of scoring patterns and game outcomes throughout the postseason. The visualization techniques used here aim to uncover interesting patterns and trends in NBA scoring across different teams and venues.
